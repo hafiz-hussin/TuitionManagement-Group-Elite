@@ -50,3 +50,45 @@ interface Subject {
 }
 
 // create objects test
+// student a
+
+
+export class testAttendance {
+
+    attendance : Attendance;
+    students : Student[]=[];
+
+    constructor(){
+
+        let student =  {
+            gender : Gender.FEMALE,
+            idNum : 1,
+            name : "THE UNKNOWN"
+        };
+
+        let student2 =  {
+            gender : Gender.FEMALE,
+            idNum : 1,
+            name : "THE UNKNOWN"
+        };
+
+        this.students.push(student);
+        this.students.push(student2);
+
+        this.attendance={
+        students : this.students
+        }
+        this.show();
+
+
+    }
+
+    show(){
+        console.log(this.attendance);
+    }
+
+
+
+}
+
+let test = new testAttendance();
