@@ -9,13 +9,8 @@ enum Gender {
 }
 
 interface Student extends Person{
-    Subject: Subject[];
     idNum: number;
 
-}
-
-interface Subject {
-    codeSubject: string;
 }
 
 interface Manager extends Person{
@@ -23,6 +18,35 @@ interface Manager extends Person{
     salary: number;
 }
 
-interface Branch {
+interface Instructor extends Person{
+    branch: Branch;
+    Sessions?: Sessions[];
+    rating?: number;
+    salary: string;
+}
+
+interface Sessions{
+    attendances: Attendance[];
+    instructors: Instructor[];
 
 }
+
+interface Attendance {
+    students: Student[];
+}
+
+interface Branch {
+    branchName: string;
+    branchID: string;
+
+}
+
+
+interface Subject {
+    idSubject: string;
+    subjectName: string;
+    sessions: Sessions[];
+    fees: number;
+}
+
+// create objects test
